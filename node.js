@@ -123,7 +123,7 @@ if (age >= 19) {
  
 
 
-let accountBalance =  0.2;
+let accountBalance =  50;
 if (accountBalance <= 0) {
   console.log('Account Overdrawn');
 } else if (accountBalance > 0 && accountBalance < 100) {
@@ -151,4 +151,28 @@ switch (true) {
     console.log('Final Grade: F');
 } 
 
-//
+//Conditional (Ternary) Operator: Create a variable holding a user's account balance. Use the ternary operator to evaluate whether the balance is less than zero; if true, assign the string "Account Overdrawn", otherwise assign "Account Active".
+// Example:
+let userAccountBalance = -50; // Example account balance
+
+let accountStatus = (userAccountBalance < 0) ? "Account Overdrawn" : "Account Active";
+
+console.log(accountStatus); // Output: Account Overdrawn  
+
+
+
+//Global vs. Local: Define the "Global Object" (window/global) and explain the risks of polluting the global scope with variables.
+//example of global variable:
+var globalVariable = "I am a global variable";
+
+function exampleFunction() {
+  console.log(globalVariable); // Accessible within the function
+}
+
+exampleFunction(); // Output: I am a global variable
+
+// Risks of Polluting the Global Scope:
+// 1. Name Collisions: If multiple scripts define variables with the same name in the global scope, it can lead to unexpected behavior and bugs.
+// 2. Difficulty in Maintenance: Global variables can be modified from anywhere in the code, making it harder to track changes and maintain the codebase.
+// 3. Reduced Reusability: Functions that rely on global variables are less reusable since they depend on external state.
+// 4. Increased Complexity: As the number of global variables grows, it becomes more challenging to manage and understand the code. 
