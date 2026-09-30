@@ -153,11 +153,11 @@ switch (true) {
 
 //Conditional (Ternary) Operator: Create a variable holding a user's account balance. Use the ternary operator to evaluate whether the balance is less than zero; if true, assign the string "Account Overdrawn", otherwise assign "Account Active".
 // Example:
-let userAccountBalance = -50; // Example account balance
+let userAccountBalance = 100; // Example account balance
 
-let accountStatus = (userAccountBalance < 0) ? "Account Overdrawn" : "Account Active";
+let accountStatus = (userAccountBalance > 0) ? "Account Active" : "Account Overdrawn";
 
-console.log(accountStatus); // Output: Account Overdrawn  
+console.log(accountStatus); // Output: Account Active  
 
 
 
@@ -176,3 +176,31 @@ exampleFunction(); // Output: I am a global variable
 // 2. Difficulty in Maintenance: Global variables can be modified from anywhere in the code, making it harder to track changes and maintain the codebase.
 // 3. Reduced Reusability: Functions that rely on global variables are less reusable since they depend on external state.
 // 4. Increased Complexity: As the number of global variables grows, it becomes more challenging to manage and understand the code. 
+
+
+//Part 1: Control Flow (If-Else & Logical Operators)
+//Theoretical Mastery
+//Truthy and Falsy: Explain the concept of "truthy" and "falsy" values in JavaScript. List at least five values that evaluate to false in a boolean context.
+// example of truthy and falsy values:
+// In JavaScript, "truthy" values are those that evaluate to true in a boolean context, while "falsy" values evaluate to false. Falsy values include:
+// 1. false
+// 2. 0 (zero)
+// 3. "" (empty string)
+// 4. null
+// 5. undefined
+// 6. NaN (Not-a-Number)  
+
+
+
+//Short-Circuit Logic: Describe how the && (AND) and || (OR) operators use short-circuit evaluation. How can this be used to provide default values for variables?
+ //example of short-circuit logic:
+// Short-circuit evaluation means that in a logical expression, the evaluation stops as soon as the result is determined. For the && operator, if the first operand is false, the second operand is not evaluated because the whole expression will be false. For the || operator, if the first operand is true, the second operand is not evaluated because the whole expression will be true.
+
+// This behavior can be used to provide default values for variables. For example:
+let userInput = null;
+let defaultValue = "Default Value";
+
+let finalValue = userInput || defaultValue; // If userInput is falsy (null), finalValue will be assigned defaultValue.
+
+console.log(finalValue); // Output: Default Value 
+
